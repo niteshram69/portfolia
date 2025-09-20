@@ -40,5 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large media files
-public/hero.mp4
+# large media files are tracked via Git LFS (see .gitattributes)

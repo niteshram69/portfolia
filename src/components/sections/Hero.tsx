@@ -67,7 +67,7 @@ export function Hero() {
           {/* Greeting with animation */}
           <div className="space-y-2">
             <p className="text-lg sm:text-xl text-white/90 font-light tracking-wide animate-fade-in">
-              Hi, I'm
+              Hi, I&apos;m
             </p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
               <span className="bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent animate-slide-up">
