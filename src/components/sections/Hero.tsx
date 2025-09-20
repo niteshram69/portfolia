@@ -33,8 +33,7 @@ export function Hero() {
             setIsLoaded(true);
           }}
         >
-          {/* Try multiple video sources */}
-          <source src="/hero.mp4" type="video/mp4" />
+          {/* Use Cloudinary video as primary source */}
           <source src="https://res.cloudinary.com/demo/video/upload/v1652366604/docs/forest_hike.mp4" type="video/mp4" />
         </video>
         
