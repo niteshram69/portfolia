@@ -47,17 +47,31 @@ export function Hero() {
           preload="metadata"
           onLoadedData={handleVideoLoad}
           onCanPlay={handleVideoLoad}
-          src="/hero.mp4"
-          poster="/hero-poster.jpg"
-        />
+          onError={() => {
+            // Fallback to gradient background if video fails
+            setIsLoaded(true);
+          }}
+        >
+          {/* Try multiple video sources */}
+          <source src="/hero.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/demo/video/upload/v1652366604/docs/forest_hike.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Animated gradient background fallback */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.2),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(120,200,255,0.2),transparent_50%)]" />
+        </div>
         
         {/* Enhanced gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/60 dark:from-black/70 dark:via-black/40 dark:to-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40 dark:from-black/60 dark:via-black/30 dark:to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         
         {/* Animated background pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%)] animate-[shimmer_3s_ease-in-out_infinite]" />
         </div>
       </div>
 
