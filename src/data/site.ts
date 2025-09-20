@@ -121,7 +121,7 @@ export const projects: Project[] = [
     ],
     tech: ["Next.js", "LiveKit", "WebSockets", "mem0", "OpenAI/Groq/OpenRouter"],
     links: {
-      live: "#",
+      live: "https://livekit-ai-chat-agent.netlify.app/",
       github: "https://github.com/niteshram69/Nr_ChatSupport",
     },
   },
@@ -135,7 +135,7 @@ export const projects: Project[] = [
       "Modular frontend and backend",
     ],
     tech: ["React", "Next.js", "Node.js", "REST APIs"],
-    links: { live: "#", github: "https://github.com/niteshram69/bike_registration" },
+    links: { live: "https://superbikes-mu.vercel.app/", github: "https://github.com/niteshram69/bike_registration" },
   },
   {
     title: "Traffic Sign Recognition System",
